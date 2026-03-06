@@ -6,6 +6,52 @@
         <style>
             p>span{ color: #fd2003}
             #picapau{width:1000px; border:4px solid gold}
+            /** #RRGGBBAA **/
+            /** 00 -> FF **/
+            /** #0000FF **/
+            /** #0000FFAA **/
+            table,td, th, caption{
+                border: 1px solid #000000;
+                border-collapse: collapse;
+            }
+            #tabela-churrasco caption{
+                border-radius: 10px 10px 0px 0px;
+            }
+            img  {border-radius: 90%;}
+            #tabela-churrasco,
+            #tabela-churrasco td,
+            #tabela-churrasco caption,
+            #tabela-churrasco th{
+                border: 2px solid #2267c0e6;
+                border-collapse: collapse;
+            }
+            #tabela-churrasco tr:nth-child(2n){
+                background-color: cornflowerblue;
+            }
+            #tabela-churrasco td:hover{
+                background-color: gold;
+            }
+            #tabela-churrasco tr:hover{
+                background-color: rgb(255, 0, 0);
+                transition: linear 2s;
+                font-size: 2em;
+            }
+            #card{
+                border:1px solid black;
+                box-shadow: 10px 2px gray;
+                display: inline-block;
+            }
+            #card h2{
+                display: inline-block;
+            }
+            #card #avatar{
+                    width: 30px;
+            }
+            #card #picapau{
+                width: 100px;
+                display: block;
+                margin:10px;
+            }
         </style>
        
     </head>
@@ -70,6 +116,99 @@ int main() {
     <dd>Nos dá energia e disposição para ir treinar</dd>
 </dl>
     <h1>Desenho preferido</h1>
-<img id="picapau" src="imgs/Pica-Pau-1000px-2_0.jpg" alt="Imagem Pica-Pau" />
+<!-- <img id="picapau" src="imgs/Pica-Pau-1000px-2_0.jpg" alt="Imagem Pica-Pau" /> -->
+
+    <table id = "tabela-churrasco">
+        <caption>Lista de Compras</caption>
+        <tr>
+            <th>Itens</th>
+            <th>Classificação</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="1">1</td>
+            <td rowspan="3" colspan="1">Comidas</td>
+            <td>Carne</td>
+            <td>6</td>
+            <td>40</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Franguinho</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pão de alho</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="3" colspan="1">Bebidas</td>
+            <td>Cerveja</td>
+            <td>20</td>
+            <td>5</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Água C/Gás</td>
+            <td>5</td>
+            <td>3</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Refri</td>
+            <td>5</td>
+            <td>8</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td rowspan="3" colspan="1">Outros</td>
+            <td>Copos</td>
+            <td>1</td>
+            <td>8</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Guardanapos</td>
+            <td>1</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Carvão</td>
+            <td>1</td>
+            <td>32</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td rowspan="1" colspan="4">Total</td>
+            <td></td>
+            <td>500</td>
+        </tr> 
+    </table>
+
+    <h1>Container</h1>
+    <div id="card">
+            <img id="engracada" src="./imgs/engraçada.jpg">
+         <h2>Título</h2>
+            <img id="picapau" src="./imgs/Pica-Pau-1000px-2_0.jpg" alt="Imagem picapau">
+    </div>
+
+
+
     </body>
 </html>
