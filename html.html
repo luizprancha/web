@@ -120,6 +120,8 @@ int main() {
 
     <table id = "tabela-churrasco">
         <caption>Lista de Compras</caption>
+        <thead>
+        <thead>    
         <tr>
             <th>Itens</th>
             <th>Classificação</th>
@@ -128,6 +130,8 @@ int main() {
             <th>Valor</th>
             <th>Subtotal</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
             <td rowspan="1" colspan="1">1</td>
             <td rowspan="3" colspan="1">Comidas</td>
@@ -194,21 +198,44 @@ int main() {
             <td>32</td>
             <td>32</td>
         </tr>
-        <tr>
+        </tbody>
+        <tfoot>        <tr>
             <td rowspan="1" colspan="4">Total</td>
             <td></td>
             <td>500</td>
-        </tr> 
+        </tfoot>
+        </tr>
     </table>
 
     <h1>Container</h1>
     <div id="card">
-            <img id="engracada" src="./imgs/engraçada.jpg">
+            <img id="picapau" src="./imgs/Pica-Pau-1000px-2_0.jpg" alt="">
          <h2>Título</h2>
-            <img id="picapau" src="./imgs/Pica-Pau-1000px-2_0.jpg" alt="Imagem picapau">
+            <img id="engracada" src="./imgs/engraçada.jpg" alt="">
     </div>
 
+    <hr>
+    <h2>Formulários e Inputs</h2>
+    <a href="https://www.w3schools.com/tags/tag_html.asp"> Formulários</a>
+    <form action="">
+        <input type="text">
+        <input type="color">
+        <input type="date">
+        <input type="datetime">
+        <input type="file">
+        <input type="number">
+        <input type="checkbox" name="" id="">
+        <input type="radio" name="" id="">
+        <input type="range">
 
+        <input type="submit" value="submit">
+    </form>
+
+    <form action="https://google.com/search" method="post">
+        <label for="chave">Informe a busca</label>
+        <input type="text" name="q" id="chave">
+        <input type="submit" value="Pesquisar">
+    </form>
 
     </body>
 </html>
