@@ -1,0 +1,10 @@
+/** regra CSS
+    seletor { propriedade1:valor;
+              propriedade2:valor;
+              propriedade3:valor;
+            }
+*/
+h1{
+    color: aquamarine;
+}
+p {color: rgb(0, 0, 0);}

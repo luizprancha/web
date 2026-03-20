@@ -1,0 +1,92 @@
+/* Estilo geral da página */
+body {
+    background-color: #000000;
+    color: #00e3f3e5;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+    color: #00e3f3e5;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #00e3f3e5;
+}
+
+/* Hover nos links */
+a:hover {
+    color: #00e3f3e5;
+}
+
+/* ===================== */
+/* TABELAS */
+/* ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ffffffe5;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #000000e5;
+}
+
+/* ===================== */
+/* FORMULÁRIO */
+/* ===================== */
+form {
+    background-color: #00e3f3e5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+/* Inputs e textarea */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #00e3f3e5;
+}
+
+/* Botão */
+button {
+    background-color: #00e3f3e5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover no botão */
+button:hover {
+    background-color: #00e3f3e5;
+}
+
+/* ===================== */
+/* MENU (caso tenha) */
+/* ===================== */
+nav a {
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

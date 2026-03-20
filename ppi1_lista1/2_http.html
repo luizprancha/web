@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTTP na Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>O que é HTTP?</h1>
+
+<p>
+    O <b>HTTP</b> (HyperText Transfer Protocol) é o protocolo usado para comunicação
+    entre o navegador e os servidores na internet.
+</p>
+
+<p>
+    Quando você acessa um site, o navegador envia uma <mark>requisição</mark>
+    e o servidor retorna uma <mark>resposta</mark>.
+</p>
+
+<hr>
+
+<h2>Como funciona</h2>
+
+<ul>
+    <li>O navegador envia um pedido</li>
+    <li>O servidor processa</li>
+    <li>O servidor envia a resposta</li>
+</ul>
+
+<h3>Ilustração</h3>
+
+
+
+<hr>
+
+<h2>Exemplo de requisição</h2>
+
+<pre>
+GET /index.html HTTP/1.1
+Host: www.exemplo.com
+</pre>
+
+<p>
+    <b>GET</b>: pede uma página<br>
+    <b>/index.html</b>: página solicitada<br>
+    <b>Host</b>: endereço do site
+</p>
+
+<hr>
+
+<h2>Exemplo de resposta</h2>
+
+<pre>
+HTTP/1.1 200 OK
+Content-Type: text/html
+
+<h1>Olá mundo</h1>
+</pre>
+
+<p>
+    <b>200 OK</b>: deu certo<br>
+    <b>Content-Type</b>: tipo do conteúdo<br>
+    <b>Body</b>: conteúdo retornado
+</p>
+
+<hr>
+
+<h2>Códigos importantes</h2>
+
+<table border="1">
+    <tr>
+        <th>Código</th>
+        <th>Significado</th>
+    </tr>
+    <tr>
+        <td>200</td>
+        <td>Sucesso</td>
+    </tr>
+    <tr>
+        <td>404</td>
+        <td>Página não encontrada</td>
+    </tr>
+</table>
+
+</body>
+</html>
