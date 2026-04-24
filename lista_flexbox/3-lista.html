@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>randomized</title>
+<style>
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+#dados {
+    background-color: white;
+    width: 350px;
+    padding: 10px 0;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 20px;
+}
+
+.img {
+    width: 55px;
+    height: 55px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+#img1 { background-image: url("../imgs/daniel.jpg"); }
+#img2 { background-image: url("../imgs/gustavo.JPG"); }
+#img3 { background-image: url("../imgs/sofia.jpg"); }
+#img4 { background-image: url("../imgs/valeria.jpg"); }
+
+.nome {
+    font-size: 14px;
+}
+
+.endereco {
+    font-size: 12px;
+    color: grey;
+}
+
+hr {
+    border-top: 1px solid lightgrey;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="dados">
+        <div class="perfil">
+            <div class="img" id="img1"></div>
+            <div>
+                <p class="nome">Daniel pipo oliveira</p>
+                <p class="endereco">6765 Shady Ln Dr</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <div class="img" id="img2"></div>
+            <div>
+                <p class="nome">Gustavo Cardoso de Oliveira</p>
+                <p class="endereco">2420 Paddock Way</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <div class="img" id="img3"></div>
+            <div>
+                <p class="nome">Sofis brownie</p>
+                <p class="endereco">6727 Airplane Ave</p>
+            </div>
+        </div>
+        <hr>
+        <div class="perfil">
+            <div class="img" id="img4"></div>
+            <div>
+                <p class="nome">Varelia de almeida</p>
+                <p class="endereco">6685 Blossom Hill Rd</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
