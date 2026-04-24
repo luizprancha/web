@@ -4,10 +4,20 @@
     <style>
         .container{
             display: grid;
-            height: 100vh;
+            grid-template-rows: 100px 200px 30vh;
             grid-template-areas: "header header header header"
                                  "main main . sidebar"
-                                 "footer footer footer footer";            ;
+                                 "footer footer footer footer";
+        }
+        @media (max-width:500px) {
+             .container{
+            display: grid;
+            grid-template-rows: 100px 200px 30vh;
+            grid-template-areas: "header"
+                                 "main"
+                                 "sidebar"
+                                 "footer";
+        }
         }
         .box{ border: 1px solid black;
         display: flex;

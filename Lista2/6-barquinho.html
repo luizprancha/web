@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barco no mar</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* CENÁRIO */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#b3e5fc, #64b5f6 70%);
+}
+
+/* 🔁 LÓGICA REUTILIZÁVEL DE MOVIMENTO */
+.move-horizontal {
+    position: absolute;
+    animation: mover linear infinite;
+}
+
+@keyframes mover {
+    from { transform: translateX(-150px); }
+    to { transform: translateX(110vw); }
+}
+
+/* NUVEM */
+.nuvem {
+    top: 15%;
+    width: 80px;
+    height: 35px;
+    background: white;
+    border-radius: 40px;
+    box-shadow:
+        35px 5px 0 white,
+        18px -8px 0 white,
+        55px 0 0 white;
+    animation-duration: 50s;
+}
+
+.nuvem2 {
+    top: 25%;
+    animation-duration: 65s;
+    transform: scale(1.2);
+}
+
+.nuvem3 {
+    top: 10%;
+    animation-duration: 75s;
+    transform: scale(0.9);
+}
+
+/* MAR */
+.mar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 32%;
+    background: #1e3a8a;
+    overflow: hidden;
+}
+
+.mar::before,
+.mar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 50px;
+    top: -20px;
+}
+
+.mar::before {
+    background: radial-gradient(circle at 50% 100%, #3f51b5 0%, transparent 70%);
+    background-size: 60px 25px;
+    animation: onda1 5s linear infinite;
+}
+
+.mar::after {
+    top: -10px;
+    opacity: 0.6;
+    background: radial-gradient(circle at 50% 100%, #283593 0%, transparent 70%);
+    background-size: 50px 20px;
+    animation: onda2 6s linear infinite reverse;
+}
+
+@keyframes onda1 {
+    to { transform: translateX(-90px); }
+}
+
+@keyframes onda2 {
+    to { transform: translateX(-70px); }
+}
+
+/* BARCO */
+.barco-trilho {
+    position: absolute;
+    bottom: calc(32% - 10px);
+    width: 120px;
+    height: 85px;
+    animation: mover 20s linear infinite;
+}
+
+.barco {
+    width: 100%;
+    height: 100%;
+    background-image: url("barco.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: balanco 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes balanco {
+    from { transform: rotate(-4deg); }
+    to { transform: rotate(4deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- NUVENS usando mesma lógica -->
+    <div class="move-horizontal nuvem"></div>
+    <div class="move-horizontal nuvem nuvem2"></div>
+    <div class="move-horizontal nuvem nuvem3"></div>
+
+    <!-- BARCO também usa a mesma lógica -->
+    <div class="barco-trilho">
+        <div class="barco"></div>
+    </div>
+
+    <div class="mar"></div>
+
+</div>
+
+</body>
+</html>
