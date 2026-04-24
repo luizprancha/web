@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-areas: "header header header header"
+                                 "main main . sidebar"
+                                 "footer footer footer footer";            ;
+        }
+        .box{ border: 1px solid black;
+        display: flex;
+        border-radius: 8%;}
+        #box1{grid-area: header; background-color: blueviolet;}
+        #box2{grid-area: main; background-color: crimson;}
+        #box4{grid-area: sidebar; background-color: blue;}
+        #box3{grid-area: footer; background-color: aqua;}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">main</div>
+        <div class="box" id="box3">footer</div>
+        <div class="box" id="box4">sidebar</div>
+    </div>
+</body>
+</html>
