@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Animação</title>
+
+<style>
+@keyframes degrade {
+    from { background-color: rgb(255, 115, 0); }
+    to { background-color: rgb(174, 0, 255); }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#box1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    animation: degrade 10s infinite;
+}
+
+#nome::before {
+    content: "Animação";
+}
+
+#final::after {
+    content: "Passe o mouse no quadrado";
+}
+
+.box {
+    transition: 5s;
+}
+
+.box:hover {
+    font-size: 700px;
+}
+
+</style>
+</head>
+
+<body>
+    <h1 id="nome"></h1>
+    <div id="box1" class="box">🚀</div>
+    <h3 id="final"></h3>
+</body>
+</html>
