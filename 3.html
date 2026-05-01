@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeiras</title>
+
+    <style>
+        #container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .box {
+            display: flex;
+            width: 400px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        .listra {
+            flex: 1;
+        }
+
+        #box1 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #listraazul {
+            background-color: rgb(0, 0, 117);
+        }
+
+        #listrabranca {
+            background-color: white;
+        }
+
+        #listravermelha {
+            background-color: red;
+        }
+
+        #box2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #listrapreta {
+            background-color: black;
+        }
+
+        #listravermelha2 {
+            background-color: red;
+        }
+
+        #listraamarela {
+            background-color: yellow;
+        }
+
+        #box3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #circulovermelho {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div id="box1" class="box">
+            <div id="listraazul" class="listra"></div>
+            <div id="listrabranca" class="listra"></div>
+            <div id="listravermelha" class="listra"></div>
+        </div>
+        <div id="box2" class="box">
+            <div id="listrapreta" class="listra"></div>
+            <div id="listravermelha2" class="listra"></div>
+            <div id="listraamarela" class="listra"></div>
+        </div>
+        <div id="box3" class="box">
+            <div class="quadrado"></div>
+            <div id="circulovermelho" class="circulo"></div>
+        </div>
+    </div>
+</body>
+</html>
