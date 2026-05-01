@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        body{ height: 100vh; 
+            display: grid;
+            grid-template-areas: ". . ."
+                                 ". foguetinho ."
+                                 ". . .";
+            background-color: coral;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .foguete {
+            grid-area: foguetinho; 
+            font-size: 150px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="foguete">🚀</div>
+</body>
+</html>
