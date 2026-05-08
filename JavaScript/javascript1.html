@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let idade=18;
+        console.log(idade);
+        console.log(typeof(idade));
+
+        console.log("String em js")
+        let nome="Lara"
+        console.log(nome);
+        console.log(typeof(nome));
+
+        console.log("BOOLEAN")
+        let logico=true
+        console.log(logico)
+        console.log(typeof(logico));
+        
+        let variavelesquecida;
+        console.log(typeof(variavelesquecida));
+
+        let telefone=null
+        console.log(telefone)
+        console.log(typeof(telefone));
+
+        console.log(` A ${nome} tem  ${idade} anos.`)
+
+        console.log(`<p> <b> ${nome} </b> tem <mark> ${idade}</mark> </p>`)
+
+        document.body.innerHTML=`<p> <b> ${nome} </b> tem <mark> ${idade}</mark> </p>`
+
+        let dia = 5
+
+        switch(dia){
+            case 1:
+                console.log("Domingo")
+                break
+            case 2:
+                console.log("Segunda")
+                break
+            case 3:
+                console.log("Terça")
+                break
+            case 4:
+                console.log("Quarta")
+                break
+            case 5:
+                console.log("Quinta")
+                break
+            case 6:
+                console.log("Sexta")
+                break
+            case 7:
+                console.log("Sábado")
+                break
+            default:
+                console.error("Dia inválido")
+                break
+        }
+
+        idade=10
+        if (idade<12){
+            console.log("É uma criança")
+        }else if(idade<18){
+            console.log("É adolescente")
+        }else{
+            console.log("É adulto")
+        }
+
+        let nota=3
+        if (nota<6){
+            console.log("Reprovado")
+        }else if(nota<7){
+            console.log("Regular")
+        }else if(nota<9){
+            console.log("Bom")
+        }else {
+            console.log("Excelente")
+        }
+
+        console.clear()
+
+        for (let i=10; i>=0; i--){
+            console.log(`Contando ${i} segundos`)
+        }
+
+
+        console.clear()
+
+        let j=10
+        while(j>=0){
+            console.log(`Contando ${j} segundos`)
+            j--
+        }
+
+        function media(nota1,nota2){
+            return( (nota1+nota2)/2)
+        }
+        let soma=(a,b)=>{return a+b}
+        console.log (`Soma: ${soma(10,20)}`)
+        document.body.addEventListener("click",()=>{alert("oi")})
+
+    </script>
+    
+</body>
+</html>
