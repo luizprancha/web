@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <style>
+        body{
+            margin: 0;
+            display: grid;
+            height: 100vh;
+
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 0.8fr;
+            grid-template-areas:"q1 q2 q3 q3"
+                                "q4 q2 q5 bolas"
+                                "q6 q6 q5 bolas";
+        }
+    
+        #box1{ background-color: orange; grid-area: q1; }
+        #box2{ background-color: pink; grid-area: q2; }
+        #box3{ background-color: lightblue; grid-area: q3; }
+        #box4{ background-color: cadetblue; grid-area: q4; }
+        #box5{ background-color: yellowgreen; grid-area: q5; }
+        #box6{ background-color: orange; grid-area: q6; }
+        #bola1{ background-color: orange; }
+        #bola2{ background-color: pink; }   
+        #bola3{ background-color: yellowgreen; }
+        #bola4{ background-color: lightsteelblue; }
+    
+        .bola{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .bolas{
+            grid-area: bolas;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }    
+
+        .box {  
+            margin: 6px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+    <div id="box3" class="box"></div>
+    <div id="box4" class="box"></div>
+    <div id="box5" class="box"></div>
+    <div id="box6" class="box"></div>
+    <div class="bolas">
+        <div id="bola1" class="bola"></div>
+        <div id="bola2" class="bola"></div>
+        <div id="bola3" class="bola"></div>
+        <div id="bola4" class="bola"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>colorido</title>
+<style>
+
+        body{
+            height: 100vh;
+        }
+        .container{ 
+            display: grid;
+            height: 100vh;
+
+            grid-template-rows: 1fr 3fr 1fr;
+            grid-template-columns: 2fr 4fr ;
+            grid-template-areas: "header header"
+                                 "nav conten"
+                                 "nav footer "
+        }
+
+        .box{ border: 1px solid black;}
+
+        #box1{grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: hotpink;}
+
+        #box2{       
+            grid-area: conten;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            gap: 15px;
+            background-color: salmon; 
+        }
+
+        #box3{grid-area: nav; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: olive;
+        }   
+
+        #box4{grid-area: footer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+        } 
+
+        .flexlinha{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+            width: 90%;
+        }
+
+        #img {
+            width: 150px;
+            height: 120px;
+            border: 3px solid black;
+        }
+
+        .linhaC{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 10px;
+        }
+
+        .linha {
+            height: 2px;
+            background-color: black;
+            width: 100%;
+        }
+
+        .linhaB {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 90%;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="box" id="box1">HEADER</div>
+        <div class="box" id="box2"> CONTENT 
+        
+            <div class="flexlinha">
+                <div id="img"></div>
+
+                <div class="linhaC">
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                    <div class="linha"></div>
+                </div>
+            </div>
+
+            <div class="linhaB">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </div>
+
+        </div>
+        <div class="box" id="box3">NAV</div>
+        <div class="box" id="box4"> FOOTER</div>
+    </div>
+</body>
+</html>
