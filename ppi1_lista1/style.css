@@ -1,4 +1,3 @@
-/* Estilo geral da página */
 body {
     background-color: #000000;
     color: #00e3f3e5;
@@ -6,25 +5,19 @@ body {
     margin: 20px;
 }
 
-/* Títulos */
 h1, h2 {
     color: #00e3f3e5;
 }
 
-/* Links */
 a {
     text-decoration: none;
     color: #00e3f3e5;
 }
 
-/* Hover nos links */
 a:hover {
     color: #00e3f3e5;
 }
 
-/* ===================== */
-/* TABELAS */
-/* ===================== */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -44,9 +37,6 @@ th {
     background-color: #000000e5;
 }
 
-/* ===================== */
-/* FORMULÁRIO */
-/* ===================== */
 form {
     background-color: #00e3f3e5;
     padding: 20px;
@@ -54,7 +44,6 @@ form {
     width: 400px;
 }
 
-/* Inputs e textarea */
 input, select, textarea {
     width: 100%;
     padding: 8px;
@@ -64,7 +53,6 @@ input, select, textarea {
     border: 1px solid #00e3f3e5;
 }
 
-/* Botão */
 button {
     background-color: #00e3f3e5;
     color: white;
@@ -74,14 +62,10 @@ button {
     cursor: pointer;
 }
 
-/* Hover no botão */
 button:hover {
     background-color: #00e3f3e5;
 }
 
-/* ===================== */
-/* MENU (caso tenha) */
-/* ===================== */
 nav a {
     margin-right: 15px;
     font-weight: bold;

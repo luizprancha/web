@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Tipos de Variáveis</title>
+</head>
+
+<body>
+
+<h1>JavaScript</h1>
+
+<button onclick="mostrar()">Mostrar</button>
+
+<p id="pstring"></p>
+<p id="pnumero"></p>
+<p id="pboolean"></p>
+<p id="pundefined"></p>
+<p id="pnull"></p>
+<p id="pobject"></p>
+<p id="parray"></p>
+
+<p id="op1"></p>
+<p id="op2"></p>
+
+<script>
+
+function mostrar() {
+
+    let texto = "Olá";
+    let numero = 10;
+    let booleano = true;
+    let indefinido;
+    let nulo = null;
+    let objeto = {};
+    let array = [];
+
+    // Mostrar tipos
+    document.getElementById("pstring").innerText =
+    "String: " + typeof texto;
+
+    document.getElementById("pnumero").innerText =
+    "Number: " + typeof numero;
+
+    document.getElementById("pboolean").innerText =
+    "Boolean: " + typeof booleano;
+
+    document.getElementById("pundefined").innerText =
+    "Undefined: " + typeof indefinido;
+
+    document.getElementById("pnull").innerText =
+    "Null: " + typeof nulo;
+
+    document.getElementById("pobject").innerText =
+    "Object: " + typeof objeto;
+
+    document.getElementById("parray").innerText =
+    "Array: " + typeof array;
+
+    // Operações
+    console.log(texto + numero);
+    console.log(booleano * numero);
+
+    document.getElementById("op1").innerText =
+    '"Olá" + 10 = ' + (texto + numero) +
+    " -> juntou texto com número.";
+
+    document.getElementById("op2").innerText =
+    "true * 10 = " + (booleano * numero) +
+    " -> true vale 1.";
+
+}
+
+</script>
+
+</body>
+</html>
