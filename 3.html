@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS</h1>
+    <div>
+        <p>Tipos Primitivos do JS</p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Undefined</li>
+            <li>Boolean</li>
+            <li>null</li>
+        </ul>
+        
+        <P>Come declarar variáveis</P>
+        <code>
+            var nome; //cria uma variavel global com 
+            identificador nome 
+            let idade; //cria uma variável local com 
+            identificador de idade
+        </code>
+
+        <p id="funcaoEmJS">Funções em java script</p>
+        <code class="language-javascript">
+            function NomeDaFuncao() {
+                //código da funcao
+            }
+
+            //funcao anonima
+            ()=>{
+
+            }
+        </code>
+        <div>
+            <p>Tratamento de eventos em java Script</p>
+            <p>Tratamos evento em js usando <code>addEventListener</code> que vincula uma funcao a um evento especifico do DOM</p>
+            <p>exemplo</p>
+            <code class="language-javascript">
+                document.addEventListener('click', function(){
+                    console.log('Clique Detectado!')
+                })
+            </code>
+
+            <P>Eventos comuns disponiveis nos navegadores</P>
+            <ul>
+                <li>click - evento de clique</li>
+                <li>mouseover - evento de mouse sobre o elemento</li>
+                <li>mouseout - evento de mouse fora do elemento</li>
+                <li>mouseenter - evento do mouse entrando no elemento</li>
+                <li>keypress - evento de tecla pressionada</li>
+                <li>keydown - evento de tecla pressionada</li>
+                <li>keyup - evento de tecla solta</li>
+                <li>submit - evento de envio de formulario da tag form</li>
+                <li>DOMContentLoaded - eventoi disparado quando o doumento HTML é completamente carregado e parseado</li>
+                <li>change - evento disparado quando o valor de um elemento de formulario é alterado</li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+
+    document.addEventListener('keypress', function(event) {
+        console.log('Evento Keypress: ' + event.key)
+    })
+    document.addEventListener('keydowm', function(event) {
+        console.log('Evento keydowm: ' + event.key)
+    })
+
+    if (true) {
+        var nome = "João"
+        let idade = 30;
+    }
+//    console.log(nome); //imprime "João"
+//    console.log(idade); //erro: idade is not defined
+
+    function soma(a, b){
+        return a + b;
+    }
+
+    //definindo uma funcao que so recebe inteiros
+    function somaInteiros(a, b){
+        
+    }
+</script>
+</body>
+</html>
