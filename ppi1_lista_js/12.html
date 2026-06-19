@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recuperacao</title>
+</head>
+<body>
+     <input type="text" id="name" placeholder="Digite seu nome:">
+    <button id="save">Salvar</button>
+    <p id="greeting"></p>
+
+    <script>
+        let nome =localStorage.getItem("nome")
+
+        if(nome){
+            document.getElementById("greeting").textContent = "Olá" +nome;
+                console.log(nome);
+        }
+
+        document.getElementById("save").onclick = function() {
+            nome = document.getElementById("name").value;
+            localStorage.setItem("nome", nome);
+            document.getElementById("greeting").textContent = "Olá, " + nome ;
+        }
+    </script>
+</body>
+</html>

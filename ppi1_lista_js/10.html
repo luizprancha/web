@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: aquamarine;
+    }
+
+    .calculadora{
+        width:240px;
+        height: 315px;
+        background-color: grey;
+        border-radius: 10px;
+    }
+
+    #display{
+        width: 395px;
+        height: 60px;
+        font-size: 30px;
+        text-align: right;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+    }
+
+    .botao{
+        display:grid;
+        grid-template-columns: repeat(4, 100px);
+        grid-template-rows: repeat(5, 55px);
+    }
+
+    .botao button{
+        font-size:20px;
+        border:1px solid #999;
+    }
+
+    .igual{
+        background-color: tomato;
+        color:white;
+        grid-column:4;
+        grid-row:2 / 6;
+    }
+
+    .ac{
+        grid-column:3 / 4;
+    }
+
+    .operacao{
+        background-color: darkgrey;
+    }
+    </style>
+</head>
+<body>
+<div class="calculadora">
+    <input type="text" id="display">
+
+    <div class="botao">
+        <button class="operacao" onclick="ad('+')">+</button>
+        <button class="operacao" onclick="ad('-')">-</button>
+        <button class="operacao" onclick="ad('*')">*</button>
+        <button class="operacao" onclick="ad('/')">/</button>
+
+        <button onclick="ad('7')">7</button>
+        <button onclick="ad('8')">8</button>
+        <button onclick="ad('9')">9</button>
+       
+        <button class="igual" onclick="calcular()">=</button>
+
+        <button onclick="ad('4')">4</button>
+        <button onclick="ad('5')">5</button>
+        <button onclick="ad('6')">6</button>
+
+         <button onclick="ad('1')">1</button>
+        <button onclick="ad('2')">2</button>
+        <button onclick="ad('3')">3</button>
+
+        <button onclick="ad('0')">0</button>
+        <button onclick="ad('.')">.</button>
+
+        <button class="ac" onclick="limpar()">AC</button>
+    </div>
+ </div>   
+
+ <script>
+    function ad(valor) {
+        document.getElementById("display").value += valor;
+    }
+
+    function limpar() {
+        document.getElementById("display").value = " ";
+    }
+
+    function calcular(){
+        let expressao = document.getElementById("display").value;
+
+        if (expressao == "") {
+            document.getElementById("display").value = "Erro";
+        } else {
+            document.getElementById("display").value = eval(expressao);
+        }
+
+    }
+ </script>
+</body>
+</html>

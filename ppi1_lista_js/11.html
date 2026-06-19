@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            background-color: cadetblue;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #alertbotao{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+
+        #mudacor{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <label for="texto">Digite algo</label>
+        <input type="text" id="texto">
+
+        <label for="mudacor">Digite algo</label>
+        <input type="text" id="mudacor">
+
+        <button id="alertbotao">Alert Button</button>
+
+        <select id="colorSelect">
+            <option value="">Escolha uma cor</option>
+            <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+            <option value="red">Vermelho</option>
+        </select>
+    </div>
+
+    <script>
+
+        document.getElementById("alertbotao").onclick = function() {
+            alert("Seja bem-vindo");
+        };
+
+        document.getElementById("texto").addEventListener("keydown", function(event) {
+            console.log("Tecla pressionada: " + event.key);
+        });
+
+        document.getElementById("mudacor").addEventListener("focus", function() {
+            this.style.backgroundColor = "yellow";
+        });
+
+        document.getElementById("mudacor").addEventListener("blur", function() {
+            this.style.backgroundColor = "white";
+        });
+
+        const container = document.getElementById("container");
+
+        container.addEventListener("mouseover", function() {
+            this.style.backgroundColor = "lightblue";
+        });
+
+        container.addEventListener("mouseout", function() {
+            this.style.backgroundColor = "white";
+        });
+
+        document.getElementById("colorSelect").addEventListener("change", function() {
+            document.body.style.backgroundColor = this.value;
+        });
+
+    </script>
+
+</body>
+</html>
